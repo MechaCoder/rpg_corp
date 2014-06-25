@@ -112,7 +112,7 @@ equiped_weap = {
 big_list = [id,hp,armour,shield,advancement,languige,hardware,con_points,agent_skills,stats,psy_stats,skills,equiped_weap]
 #Chariter 
 #char DATA:
-
+print('Chariter Framework loaded')
 def fileSave():
 	FileControl = open('User.txt','w')
 	FileControl.write(big_list)
@@ -285,58 +285,24 @@ def SniperShot():
 	string = input('what is the size of the target picked of the list above')
 	modi = t_size(string)
 	
-"""def expi(argNum):
+def expi():
 	arg = ['add_xp','improve_skills','improve_stats','Learn_Lingo']
-	if argNum is '':
-		for its in arg:
-			print(i, ' - ', its)
-			i += 1
-		inVal = input('enter the number of thing you wish to do : ')
-	elif argNum is 'add_xp':
-		inputVal = input('enter the number of exp point you wish to add : ')
-		int(inputVal)
-		advancement['cur_xp'] = advancement['cur_xp'] + inputVal
-		advancement['total_xp'] = advancement['total_xp'] + inputVal
-	elif argNum is 'improve_skills':
-		i = 0
-		key = []
-		for s in skills.keys():
-			key.append(s)
-		for k in key:
-			print(i,' - ',k)
-		inV = input('Enter the number of the skill you want to improve : ')
-		if skills[key[inVal]] is 0:
-			skills[key[inVal]] = skills[key[inVal]] + 1
-			advancement['cur_xp'] = advancement['cur_xp'] - 2
-		elif skills[key[inVal]] < 10 and skills[key[inVal]] > 0:
-			advancement['cur_xp'] = advancement['cur_xp'] - skills[key[inVal]]
-			skills[key[inVal]] = skills[key[inVal]] + 1
-		elif skills[key[inVal]] >= 10:
-			print('sorry you can not improve you score')
-	elif argNum is 'improve_stats':
-		i = 0
-		list=[]
-		for s in stats.keys():
-			list.append(s)
-			print(i,' - ',s)
-		inVal = input('enter choice : ')
-		stats[list[inVal]] += 1
-		advancement['cur_total'] = advancement['cur_total'] - (advancement['cur_total'] * 2)
-	elif argNum is 'Learn_Lingo':
-		list1 = []
-		list2 = []
-		for e in Corp_languages.values():
-			i = 0
-			while i != len(e):
-				list1.append(e[i])
-				i += 1 
-		for e in list1:
-			if e != list2:
-				list2.append(x)
-		posLings = []
-		i = 0
-		for e in list2:
-			if e != languige:
-				posLings.append(e)
-		for e in posLings:
-                        print(i, e)"""
+	print('here is a list of things you can do with ex points :')
+	print()
+	for e in arg:
+		print
+
+def exp_add():
+	print('Your currently have a total XP ', advancement['total_xp'], ' xp')
+	print('Your currently have a current XP ', advancement['cur_xp'], ' xp')
+	whileVal is 'no'
+	while whileVal is not 'yes':
+		print('how many points would you like to add')
+		pointsAdd_int = input('int:>')
+		print('')
+		print ('are you sure?')
+		whileVal = input('yes/no :>')
+	#
+	advancement['total_xp'] += pointsAdd_int
+	advancement['cur_xp'] += pointsAdd_int
+	
