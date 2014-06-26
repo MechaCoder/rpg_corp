@@ -289,8 +289,11 @@ def expi():
 	arg = ['add_xp','improve_skills','improve_stats','Learn_Lingo']
 	print('here is a list of things you can do with ex points :')
 	print()
+	i = 1
 	for e in arg:
-		print
+		print(i, ' - ', e)
+		i += 1
+	expi_val = input('Enter what you would like to do : ')
 
 def exp_add():
 	print('Your currently have a total XP ', advancement['total_xp'], ' xp')
@@ -305,4 +308,5 @@ def exp_add():
 	#
 	advancement['total_xp'] += pointsAdd_int
 	advancement['cur_xp'] += pointsAdd_int
+def exp_imp():
 	
