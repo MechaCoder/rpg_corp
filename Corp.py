@@ -123,6 +123,7 @@ def diceScript(amount,type):
 		total = total + randint(1,int(type))
 		i += 1
 	return total
+###################################################
 def charCreate():
 	whileVal = 0
 	count1 = 0
@@ -196,6 +197,7 @@ def CharAssignSkills():
 		skill_dict_list.pop(tempInt2)
 		skill_Points_list.pop(tempInt)
 	skills = temp_skills
+
 def lockpicking():
 	LockType.upper()
 	check = 0
